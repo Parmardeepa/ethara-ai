@@ -84,8 +84,8 @@ A full-stack project management application built with **Django REST Framework**
 
 ### 1. Clone the Repository
 ```bash
-git clone 
-cd project-manager-app
+git clone https://github.com/Parmardeepa/ethara-ai.git
+cd ethara-ai
 ```
 
 ### 2. Backend Setup
@@ -170,7 +170,7 @@ Frontend runs at: `http://localhost:5173`
 - **Root directory:** `frontend/`
 - **Build command:** `npm run build`
 - **Start command:** `npx serve dist -p $PORT`
-- **Environment variable:** `VITE_API_URL=https://your-backend.railway.app`
+- **Environment variable:** `VITE_API_URL=https://ethara-ai-9qt2.onrender.com`
 
 ### ☑ Validation Checklist
 - [x] POST `/api/auth/register/` creates user and returns JWT tokens
