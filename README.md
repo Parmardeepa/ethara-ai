@@ -4,8 +4,8 @@ A full-stack project management application built with **Django REST Framework**
 
 ## 🔗 Live URL
 
-> **Backend:** []  
-> **Frontend:** []
+> **Backend:** [https://ethara-ai-9qt2.onrender.com]  
+> **Frontend:** [https://ethara-ai-ruddy.vercel.app]
 
 ## 📦 GitHub Repository
 
@@ -17,11 +17,11 @@ A full-stack project management application built with **Django REST Framework**
 
 | Layer       | Technology                                |
 |-------------|-------------------------------------------|
-| Backend     | Django 6, Django REST Framework           |
+| Backend     | Django 5, Django REST Framework           |
 | Auth        | JWT via `djangorestframework-simplejwt`   |
 | Frontend    | React 18, Vite, TanStack Query, Zustand   |
 | Database    | SQLite (dev) / PostgreSQL (production)    |
-| Deployment  | Railway (Backend + Frontend services)     |
+| Deployment  | Render (Backend + PostgreSQL services)     |
 | HTTP Client | Axios with request/response interceptors  |
 | Styling     | Vanilla CSS — Dark mode design system     |
 
@@ -38,7 +38,7 @@ A full-stack project management application built with **Django REST Framework**
 - **Dashboard Analytics** — Total tasks, by status, overdue count, my tasks, recent activity
 - **Task Filters** — Filter by `?status`, `?priority`, `?assigned_to`, `?overdue=true`
 - **Django Admin Panel** — Full admin panel at `/admin/`
-- **CORS-safe** — Configured for Railway deployment with proper `ALLOWED_HOSTS`
+- **CORS-safe** — Configured for production deployment with proper `ALLOWED_HOSTS`
 - **WhiteNoise** — Static file serving in production
 
 ---
@@ -151,7 +151,7 @@ Frontend runs at: `http://localhost:5173`
 
 ---
 
-## 🚂 Deployment Notes (Railway)
+## 🚂 Deployment Notes (Render + Vercel)
 
 ### Backend Service
 - **Root directory:** `backend/`
@@ -161,9 +161,9 @@ Frontend runs at: `http://localhost:5173`
   ```
   SECRET_KEY=<strong-random-key>
   DEBUG=False
-  DATABASE_URL=<auto-set by Railway PostgreSQL plugin>
-  CORS_ALLOWED_ORIGINS=https://your-frontend.railway.app
-  ALLOWED_HOSTS=your-backend.railway.app
+  DATABASE_URL=<Render PostgreSQL database URL>
+  CORS_ALLOWED_ORIGINS=https://ethara-ai-ruddy.vercel.app
+  ALLOWED_HOSTS=ethara-ai-9qt2.onrender.com
   ```
 
 ### Frontend Service
